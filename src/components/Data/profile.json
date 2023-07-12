@@ -1,0 +1,18 @@
+{
+  "users":[ 
+    {
+      "id":"1",
+      "name":"abc",
+      "phone":"+91-1111111111",
+      "email":"abc@gmail.com",
+      "gender":["Male","Female","Transgender"],
+      "image":"url",
+      "dob":"12/07/2023",
+      "address":"1511, near the post office muskara",
+      "state":"uttar pradesh",
+      "district":"hamirpur",
+      "city":"muskara",
+      "pincode":"210506"
+    }
+  ]
+}
