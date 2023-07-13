@@ -10,6 +10,7 @@ import Contact from "./components/layout/Contact";
 import SignUp from "./components/layout/SignUp";
 import SignIn from "./components/layout/SignIn";
 import Profile from "./components/layout/Profile";
+import Cart from "./components/layout/Cart";
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/signup" element={<SignUp/>}></Route>
           <Route path="/signin" element={<SignIn/>}></Route>
           <Route path="/profile" element={<Profile/>}></Route>
+          <Route path="/cart" element={<Cart/>}/>
         </Routes>
       </BrowserRouter>
       <ToastContainer />

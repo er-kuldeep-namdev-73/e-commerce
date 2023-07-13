@@ -4,6 +4,7 @@ import Header from '../header/Header'
 import Footer from '../footer/Footer'
 import Input from './Form/formControl'
 import axios from 'axios'
+import { toast } from 'react-toastify'
 const Contact = () => {
 
   const [contactData, setContactData] = useState({})
@@ -22,6 +23,8 @@ const Contact = () => {
             .catch((err) => {
                 console.log(err);
             });
+      
+    toast.success("Messeage Sent Successfully..")
 
   }
 
@@ -30,7 +33,7 @@ const Contact = () => {
   }
 
   return (
-    <div className='bg-warning'>
+    <div>
       <Header />
       <div className='row'>
         <div className='col-sm-3'></div>
@@ -55,7 +58,7 @@ const Contact = () => {
         <div className='col-sm-3'></div>
         <div className='row'>
           <div className='col-sm-12 mt-5'>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14232.74555725761!2d80.93628306517994!3d26.89757912649641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399957cbf43233f5%3A0x3a22b7c8a77962f0!2sAliganj%2C%20Lucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1689244540686!5m2!1sen!2sin" width="100%" height="450" style={{ border: '2' }} referrerPolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14232.74555725761!2d80.93628306517994!3d26.89757912649641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399957cbf43233f5%3A0x3a22b7c8a77962f0!2sAliganj%2C%20Lucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1689244540686!5m2!1sen!2sin" width="100%" height="450" style={{ border: '0' }} referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import Footer from '../footer/Footer'
 const Home = () => {
 
     const [data, setData] = useState([])
+    const [count,setCount]=useState(0)
     useEffect(() => {
         axios.get("https://fakestoreapi.com/products").then((res) => {
             setData(res.data)
@@ -16,9 +17,14 @@ const Home = () => {
     }, [])
     // console.log(data)
 
+    function handleCartData(){
+        console.log("Clicked on Cart Button");
+        setCount(count+1)
+    }
+
     return (
         <div>
-            <Header />
+            <Header count={count}/>
             <Slider/>
             <center className='fs-1 border-bottom border-dark border-3'><span className='text-warning'>Our</span><u className='text-danger'> Prod</u>ucts</center>
             <div className='row'>
@@ -36,7 +42,7 @@ const Home = () => {
                                             <button className='btn btn-primary w-100 mt-1'>Price : &#8377; {element.price}</button>
                                             <button className='btn btn-warning my-1 me-1'>Rating&#9733; :{element.rating.rate}</button>
                                             <button className='btn btn-warning'>Count: {element.rating.count}</button>
-                                            <button className='btn btn-success ms-5 mt-1'>Add to Cart [+]</button>
+                                            <button className='btn btn-success ms-5 mt-1' onClick={handleCartData}>Add to Cart [+]</button>
                                         </div>
                                     </div>
                                 </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({count}) => {
   return (
     <div className='header container-fluid bg-dark text-light p-3 text-center'>
         <div className='row'>
@@ -19,7 +19,8 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <div className='col-sm-2'>Cart</div>
+            <Link className='col-sm-2 rounded fs-5 p-1 text-end text-light text-decoration-none' to="/cart">&#128722;{count}</Link>
+
         </div>
     </div>
   )
