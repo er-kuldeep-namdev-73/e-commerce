@@ -1,0 +1,20 @@
+{
+  "contact": [
+    {
+      "name": "Kuldeep Namdev",
+      "email": "kuldeepnamdev330@gmail.com",
+      "phone": "7380613234",
+      "address": "1745 T Street Southeastrrr",
+      "message": "JSON-server is not working",
+      "id": 1
+    },
+    {
+      "name": "Kuldeep Namdev",
+      "email": "kuldeepnamdev330@gmail.com",
+      "phone": "7380613234",
+      "address": "1745 T Street Southeastrrr",
+      "message": "error is solve",
+      "id": 2
+    }
+  ]
+}
