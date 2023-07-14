@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Header = ({count}) => {
+const Header = ({counter}) => {
   return (
     <div className='header container-fluid bg-dark text-light p-3 text-center'>
         <div className='row'>
@@ -9,18 +9,18 @@ const Header = ({count}) => {
             <div className='col-sm-8'>
                 <div className='row'>
                     <div className='col-sm-12 fs-5'>
-                        <Link className='m-1' to="/home">Home</Link>
-                        <Link className='m-1' to="/products">Products</Link>
-                        <Link className='m-1' to="/about">About Us</Link>
-                        <Link className='m-1' to="/contact">Contact Us</Link>
-                        <Link className='m-1' to="/signup">Sign Up</Link>
-                        <Link className='m-1' to="/signin">Sign In</Link>
-                        <Link className='m-1' to="/profile">Your Profile</Link>
+                        <Link className='m-1 text-decoration-none text-light' to="/home">Home</Link>
+                        <Link className='m-1 text-decoration-none text-light' to="/products">Products</Link>
+                        <Link className='m-1 text-decoration-none text-light' to="/about">AboutUs</Link>
+                        <Link className='m-1 text-decoration-none text-light' to="/contact">ContactUs</Link>
+                        <Link className='m-1 text-decoration-none text-light' to="/order">Order</Link>
+                        <Link className='m-1 text-decoration-none text-light' to="/signup">SignUp</Link>
+                        <Link className='m-1 text-decoration-none text-light' to="/signin">SignIn</Link>
+                        <Link className='m-1 text-decoration-none text-light' to="/profile">YourProfile</Link>
                     </div>
                 </div>
             </div>
-            <Link className='col-sm-2 rounded fs-5 p-1 text-end text-light text-decoration-none' to="/cart">&#128722;{count}</Link>
-
+            <Link className='col-sm-2 rounded fs-5 p-1 text-end text-light text-decoration-none' to="/cart">&#128722;{counter}</Link>
         </div>
     </div>
   )

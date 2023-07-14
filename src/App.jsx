@@ -11,8 +11,10 @@ import SignUp from "./components/layout/SignUp";
 import SignIn from "./components/layout/SignIn";
 import Profile from "./components/layout/Profile";
 import Cart from "./components/layout/Cart";
+import Order from "./components/layout/Order";
 
 function App() {
+
 
   return (
     <div className="container-fluid">
@@ -28,6 +30,7 @@ function App() {
           <Route path="/signin" element={<SignIn/>}></Route>
           <Route path="/profile" element={<Profile/>}></Route>
           <Route path="/cart" element={<Cart/>}/>
+          <Route path="/order" element={<Order/>}></Route>
         </Routes>
       </BrowserRouter>
       <ToastContainer />

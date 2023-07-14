@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Header from '../header/Header'
 import Footer from '../footer/Footer'
 
-const Profile = () => {
+const Profile = ({counter}) => {
     const [userData, setUserData] = useState({})
     useEffect(() => {
         let uuid = sessionStorage.getItem("uuid")
@@ -15,7 +15,7 @@ const Profile = () => {
 
     return (
         <div>
-            <Header />
+            <Header counter={counter}/>
             <div className='row mt-5'>
                 <div className='col-sm-3'></div>
                 <div className='col-sm-6 my-5'>

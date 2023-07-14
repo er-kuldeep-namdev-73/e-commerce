@@ -5,7 +5,7 @@ import Footer from '../footer/Footer'
 import Input from './Form/formControl'
 import axios from 'axios'
 import { toast } from 'react-toastify'
-const Contact = () => {
+const Contact = ({counter}) => {
 
   const [contactData, setContactData] = useState({})
 
@@ -34,7 +34,7 @@ const Contact = () => {
 
   return (
     <div>
-      <Header />
+      <Header counter={counter}/>
       <div className='row'>
         <div className='col-sm-3'></div>
         <div className='col-sm-6'>

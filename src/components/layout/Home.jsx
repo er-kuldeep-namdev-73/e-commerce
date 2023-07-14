@@ -4,10 +4,11 @@ import Header from '../header/Header'
 import axios from 'axios'
 import Slider from './Slider/Slider'
 import Footer from '../footer/Footer'
-const Home = () => {
+import { Link } from 'react-router-dom'
+const Home = ({handleCountData,counter}) => {
 
     const [data, setData] = useState([])
-    const [count,setCount]=useState(0)
+
     useEffect(() => {
         axios.get("https://fakestoreapi.com/products").then((res) => {
             setData(res.data)
@@ -15,16 +16,24 @@ const Home = () => {
             console.log(err)
         })
     }, [])
-    // console.log(data)
 
-    function handleCartData(){
-        console.log("Clicked on Cart Button");
-        setCount(count+1)
+    function handleAddToCart(element)
+    {
+        axios
+        .post("http://localhost:8001/products", { ...element })
+        .then((res) => {
+            // sessionStorage.setItem("uuid", res.cartData.id)
+            console.log(res);
+            // location("/cart")
+        })
+        .catch((err) => {
+            console.log(err);
+        });
     }
 
     return (
         <div>
-            <Header count={count}/>
+            <Header counter={counter}/>
             <Slider/>
             <center className='fs-1 border-bottom border-dark border-3'><span className='text-warning'>Our</span><u className='text-danger'> Prod</u>ucts</center>
             <div className='row'>
@@ -42,7 +51,7 @@ const Home = () => {
                                             <button className='btn btn-primary w-100 mt-1'>Price : &#8377; {element.price}</button>
                                             <button className='btn btn-warning my-1 me-1'>Rating&#9733; :{element.rating.rate}</button>
                                             <button className='btn btn-warning'>Count: {element.rating.count}</button>
-                                            <button className='btn btn-success ms-5 mt-1' onClick={handleCartData}>Add to Cart [+]</button>
+                                            <Link className='btn btn-success ms-5 mt-1' onClick={()=>handleAddToCart(element)}>Add to Cart [+]</Link>
                                         </div>
                                     </div>
                                 </div>

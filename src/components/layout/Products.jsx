@@ -1,10 +1,10 @@
 import React from 'react'
 import Header from '../header/Header'
 import Footer from '../footer/Footer'
-const Products = () => {
+const Products = ({counter}) => {
   return (
     <div>
-        <Header/>
+        <Header counter={counter}/>
         Products
         <Footer/>
     </div>

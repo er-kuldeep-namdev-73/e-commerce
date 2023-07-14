@@ -15,7 +15,6 @@ const SignIn = () => {
   function handleSubmit(e) {
     e.preventDefault();
     // console.log(data);
-    toast.success("Login Successfully");
     axios.get("http://localhost:8000/users").then((res) => {
       let isUserExist = res.data.filter(element=>(
         element.email === data.email && element.password === data.password
@@ -23,12 +22,13 @@ const SignIn = () => {
       
       if(isUserExist.length==0)
       {
-        alert("User not exist") 
+        toast.error("Credentials Not Matched!");
       }
       else
       {
         sessionStorage.setItem("uuid", isUserExist[0].id); 
         location("/profile")
+        toast.success("Login Successfully");
       }
      
 
